@@ -1,0 +1,29 @@
+.title {
+    color: $shark;
+
+    &__h4 {
+        margin-bottom: 10px;
+        @extend %alconica;
+        font-size: 56px;
+    }
+
+    &__h5 {
+        margin-bottom: 20px;
+        @extend %sans-bold;
+        font-size: 16px;
+        letter-spacing: 8px;
+    }
+    
+    &__h6 {
+        margin-bottom: 20px;
+        margin-top: 10px;
+        @extend %sans-bold;
+        font-size: 28px;
+    }
+
+    &__text {
+        @extend %sans-regular;
+        text-align: justify;
+        margin-bottom: 20px;
+    }
+}

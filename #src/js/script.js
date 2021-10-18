@@ -1,4 +1,38 @@
+// HUMBURGER
+$('.humburger').click(function(event) {
 
+    let showMenu = false;
+
+    if(!showMenu) {
+        $('.humburger').toggleClass('close');
+
+        $(`
+            .menu,
+            .menu__branding,
+            .menu__list,
+            .menu__item,
+            .social
+        `).toggleClass('show');
+
+        $('body, html').toggleClass('lock');
+
+        showMenu = true;
+    } else {
+        $('.humburger').removeClass('close');
+
+        $(`
+            .menu,
+            .menu__branding,
+            .menu__list,
+            .menu__item,
+            .social
+        `).removeClass('show');
+
+        $('body, html').removeClass('lock'); 
+        
+        showMenu = false;
+    }
+});
 
 // MODALS
 const openModalButtons = $('[data-modal-target]'),

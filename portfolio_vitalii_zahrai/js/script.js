@@ -1,6 +1,22 @@
 "use strict";
 
-// MODALS
+// HUMBURGER
+$('.humburger').click(function (event) {
+  var showMenu = false;
+
+  if (!showMenu) {
+    $('.humburger').toggleClass('close');
+    $("\n            .menu,\n            .menu__branding,\n            .menu__list,\n            .menu__item,\n            .social\n        ").toggleClass('show');
+    $('body, html').toggleClass('lock');
+    showMenu = true;
+  } else {
+    $('.humburger').removeClass('close');
+    $("\n            .menu,\n            .menu__branding,\n            .menu__list,\n            .menu__item,\n            .social\n        ").removeClass('show');
+    $('body, html').removeClass('lock');
+    showMenu = false;
+  }
+}); // MODALS
+
 var openModalButtons = $('[data-modal-target]'),
     closeModalButtons = $('[data-close-button]'),
     overlay = $('#overlay');

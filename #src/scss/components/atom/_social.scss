@@ -1,0 +1,26 @@
+.social {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 90px;
+    background-color: $eternity; 
+
+    &:hover {
+        margin-left: 0;
+    }
+
+    a {
+        margin: 10px 15px;
+        i {
+            font-size: 26px;  
+            color: $white;
+
+            &:focus,
+            &:hover {
+                filter: $filter-active;
+                transition: all 0.6s;
+            }
+        }
+    }
+}

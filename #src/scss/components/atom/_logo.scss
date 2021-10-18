@@ -1,0 +1,24 @@
+.logo {
+    &__logo {
+        color: $white;
+        font-size: 32px;
+        text-decoration: none;
+
+        a {
+            text-decoration: none;
+        }
+        
+        span{
+            @extend %monoton;
+            &:hover {
+                color: $buttercup;
+            }
+        }    
+
+        span:nth-child(1) {
+            padding: 0 5px;
+            color: $buttercup;
+            border: 2px solid $buttercup;; 
+        }
+    }
+}

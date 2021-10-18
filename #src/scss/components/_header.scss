@@ -1,4 +1,171 @@
 .header {
 
+    .menu {
+        width: 30%;
+        height: 100vh;
+        position: fixed;
+        z-index: 100;
+        top: 0;
+        right: 0;
+
+        &__branding {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            height: 15vh;
+            background: $shark;
+            margin-left: 0px;
+            padding: 10px 10px;
+        }
+        
+        &__portrait {
+            width: 100px;
+            height: 100px;
+            background: url('../../img/header/logo.png');
+            background-position: center;
+            background-size: cover;
+            border-radius: 50%;
+        }
+
+        &__text {
+            padding-left: 15px;
+        }
+
+        &__list {
+            height: 75vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        &__item {
+            padding: 15px;
+            display: flex;
+            height: 100%;
+
+            &:hover {
+                margin-left: -10px;
+                @include easeOut;
+            }
     
+            &:nth-child(1) {
+                background-color: $chilean-fire; 
+            }
+            &:nth-child(2) {
+                background-color: $flush-orange; 
+            }
+            &:nth-child(3) {
+                background-color: $feb-orange; 
+            }
+            &:nth-child(4) {
+                background-color: $peach-orange; 
+            }
+            &:nth-child(5) {
+                background-color: $driftwood; 
+            }
+            &:nth-child(6) {
+                background-color: $brown-bramble; 
+            }
+            &:nth-child(7) {
+                background-color: $cioccolato; 
+            }
+        }
+
+        .active{
+            margin-left: -10px;
+        }
+
+        &__link {
+            display: flex;
+            align-items: center;
+            padding-left: 20px;
+            text-decoration: none;
+            padding: 15px 15px;
+            width: 100%;
+            @include easeOut;
+
+            i {
+                font-size: 20px;  
+                color: $white;
+            }
+
+            span {
+                padding-left: 20px;
+                color:$white;
+                @extend %sans-regular;
+                font-size: 15px;
+                text-transform: uppercase;
+            }
+        }
+
+        .social {
+            height: 10vh;
+        }
+
+    }
+
+    @include mq("desktop") {
+
+        .menu {
+            width: 100%;
+            opacity: 0.9;
+            visibility: hidden;
+
+            &.show {
+                visibility: visible;
+            }
+
+            &__branding {
+                justify-content: center;
+                transform: translate3d(100%, 0, 0);
+                @include easeOut;
+
+                &.show {
+                    transform: translate3d(0, 0, 0);
+                }
+            }
+
+            &__list {
+                transform: translate3d(-100%,0,0);
+                @include easeOut;
+
+                &.show {
+                    transform: translate3d(0, 0, 0);
+                }
+            }
+
+            &__item {
+                transform: translate3d(-100%, 0, 0);
+                @include easeOut;
+
+                &.show {
+                    transform: translate3d(0, 0, 0);
+                }
+
+                &:hover {
+                    margin-left: 0;
+                }
+            }
+
+            &__link {
+                justify-content: center;
+            }
+
+            .social {
+                transform: translate3d(-100%, 0, 0);
+                @include easeOut;
+
+                &.show {
+                    transform: translate3d(0, 0, 0);
+                }
+            }
+        }
+    }
+
+    @for $x from 1 through 7 {
+        .menu__item:nth-child(#{$x}) {
+            transition-delay: $x * 0.1s;
+        }
+    }
 }
+
