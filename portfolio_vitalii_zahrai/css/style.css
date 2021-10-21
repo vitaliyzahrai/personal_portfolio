@@ -944,9 +944,9 @@ a {
 }
 
 .header .menu__portrait {
-  width: 100px;
-  height: 100px;
-  background: url("../../img/header/logo.png");
+  width: 13vh;
+  height: 13vh;
+  background: url("../img/header/logo.png");
   background-position: center;
   background-size: cover;
   border-radius: 50%;
@@ -965,8 +965,13 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.header .menu__list::-webkit-scrollbar {
+  display: none;
 }
 
 .header .menu__item {

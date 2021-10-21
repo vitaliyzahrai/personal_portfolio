@@ -19,9 +19,9 @@
         }
         
         &__portrait {
-            width: 100px;
-            height: 100px;
-            background: url('../../img/header/logo.png');
+            width: 13vh;
+            height: 13vh;
+            background: url('../img/header/logo.png');
             background-position: center;
             background-size: cover;
             border-radius: 50%;
@@ -35,7 +35,13 @@
             height: 75vh;
             display: flex;
             flex-direction: column;
-            justify-content: space-around;
+            overflow: auto;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+            
+            &::-webkit-scrollbar {
+                display: none;
+            }
         }
 
         &__item {
