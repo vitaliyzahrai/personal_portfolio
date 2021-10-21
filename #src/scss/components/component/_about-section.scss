@@ -1,0 +1,55 @@
+.about {
+
+    .logo {
+        &__logo {
+            color: $shark;
+        }
+    }
+
+    &__address {
+        margin-top: 15px;
+        line-height: 35px;        
+        @extend %sans-regular;
+        font-size: 18px;
+        p{
+            margin-bottom: 10px;
+            text-decoration: none;
+            span{
+                @extend %sans-bold;
+                font-size: 15px;
+            }
+        }
+    }
+
+    &__achievement {
+        .achievement {
+            display: flex;
+            &__info {
+                display: flex;
+                flex-direction: column;
+                max-width: 150px;
+                width: 100%;
+                &:not(:first-child){
+					margin-left: 20px;
+				}
+
+                .counter-1 {
+                    color: $lipstick;
+                }
+            }
+
+            &__counter {
+                @extend %sans-bold;
+                font-size: 60px;
+                color: $flamingo;
+            }
+
+            &__text {
+                @extend %sans-regular;
+                color: $shark;
+                font-size: 14px;
+                margin-top: 5px;
+            }
+        }
+    }
+}

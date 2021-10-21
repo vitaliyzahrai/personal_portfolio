@@ -742,13 +742,17 @@ button.swiper-pagination-bullet {
 
 .header .menu__link span,
 .title__text,
-.banner .heading__h3 {
+.banner .heading__h3,
+.about__address,
+.about__achievement .achievement__text {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
 }
 
 .title__h5,
-.title__h6 {
+.title__h6,
+.about__address p span,
+.about__achievement .achievement__counter {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
 }
@@ -1285,6 +1289,62 @@ a {
   font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 28px;
+}
+
+.about .logo__logo {
+  color: #2D3038;
+}
+
+.about__address {
+  margin-top: 15px;
+  line-height: 35px;
+  font-size: 18px;
+}
+
+.about__address p {
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+
+.about__address p span {
+  font-size: 15px;
+}
+
+.about__achievement .achievement {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.about__achievement .achievement__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 150px;
+  width: 100%;
+}
+
+.about__achievement .achievement__info:not(:first-child) {
+  margin-left: 20px;
+}
+
+.about__achievement .achievement__info .counter-1 {
+  color: #B90162;
+}
+
+.about__achievement .achievement__counter {
+  font-size: 60px;
+  color: #F26522;
+}
+
+.about__achievement .achievement__text {
+  color: #2D3038;
+  font-size: 14px;
+  margin-top: 5px;
 }
 
 .swiper-container {
