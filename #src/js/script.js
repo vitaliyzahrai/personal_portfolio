@@ -5,7 +5,6 @@ $('.humburger').click(function(event) {
 
     if(!showMenu) {
         $('.humburger').toggleClass('close');
-
         $(`
             .menu,
             .menu__branding,
@@ -13,13 +12,10 @@ $('.humburger').click(function(event) {
             .menu__item,
             .social
         `).toggleClass('show');
-
         $('body, html').toggleClass('lock');
-
         showMenu = true;
     } else {
         $('.humburger').removeClass('close');
-
         $(`
             .menu,
             .menu__branding,
@@ -27,11 +23,35 @@ $('.humburger').click(function(event) {
             .menu__item,
             .social
         `).removeClass('show');
-
         $('body, html').removeClass('lock'); 
-        
         showMenu = false;
     }
+});
+
+$('.menu__item').click(function(event){
+    $(`
+        .menu,
+        .menu__branding,
+        .menu__list,
+        .menu__item,
+        .social
+    `).removeClass('show');
+    $('body, html').removeClass('lock');
+    $('.humburger').removeClass('close'); 
+});
+
+// 
+
+$('.achievement__counter').each(function() {
+    $(this).prop('Counter',0).animate({
+        Counter: $(this).text()
+    }, {
+        dutation: 9000,
+        easing: 'linear',
+        step: function(now) {
+            $(this).text(Math.ceil(now));
+        }
+    });
 });
 
 // MODALS
