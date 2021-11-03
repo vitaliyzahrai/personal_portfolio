@@ -36,4 +36,34 @@
             letter-spacing: 28px;
         }
     }
+
+    @include mq("tablet-wide"){
+        .heading {
+            &__h1 {
+                font-size: 40px;
+            }
+            &__h2 {
+                font-size: 80px;
+            }
+            &__h3 {
+                font-size: 12px;
+                letter-spacing: 20px;
+            }
+        }
+    }
+
+    @include mq("tablet-small"){
+        .heading {
+            &__h1 {
+                font-size: 36px;
+            }
+            &__h2 {
+                font-size: 60px;
+            }
+            &__h3 {
+                font-size: 12px;
+                letter-spacing: 16px;
+            }
+        }
+    }
 }

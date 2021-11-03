@@ -26,4 +26,21 @@
         text-align: justify;
         margin-bottom: 20px;
     }
+
+    @include mq("tablet-wide"){
+        &__h4 {
+            font-size: 50px;
+        }
+        &__h5 {
+            font-size: 14px;
+        }
+    }
+
+    @include mq("tablet"){
+        &__h4 {
+            font-size: 46px;
+            margin-bottom: 8px;
+        }
+    }
+
 }
