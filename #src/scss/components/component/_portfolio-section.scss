@@ -1,0 +1,19 @@
+.portfolio {
+    background-color: $gallery;
+
+        .image-slider {
+
+            &__image {
+                display: flex;
+                justify-content: center;
+
+                img {
+                    width: 100%;
+                    max-width: 400px;
+                    height: 100%;
+                    min-height: 240px;
+                }
+            }
+        }
+    
+}

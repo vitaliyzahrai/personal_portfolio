@@ -21,4 +21,11 @@
             border: 2px solid $buttercup;; 
         }
     }
+
+    @include mq("tablet") {
+
+        &__logo{
+            font-size: 26px;
+        }
+    }
 }

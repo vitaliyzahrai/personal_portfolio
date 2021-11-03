@@ -1,0 +1,29 @@
+.text-info {
+    display: flex;
+    flex-direction: column;
+
+    .institution  {
+        margin-top: 15px;
+        font-size: 28px;
+        color: $shark;
+        @extend %sans-bold;
+    }
+    .year {
+        margin: 10px 0;
+        font-size: 18px;
+        color: $shark;
+        @extend %sans-bold;
+        line-height: 10px;
+    }
+
+    p {
+        margin: 20px 0;
+        color: $shark;
+        @extend %sans-regular;
+        font-size: 22px;
+    }
+}
+
+hr {
+    color: $shark;
+}

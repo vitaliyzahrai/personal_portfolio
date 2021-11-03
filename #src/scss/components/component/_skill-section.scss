@@ -1,0 +1,139 @@
+.skill {
+    background-color: $gallery;
+
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__skills {
+        width: 48%;
+        margin-bottom: 20px;
+
+        &:last-child{
+            margin: 0 auto 20px;
+        }
+    }
+    
+    &__names {
+        margin: 20px 0 5px 0;
+        color: $shark;
+        @extend %sans-regular;
+    }
+
+    &__bar {
+        height: 10px;
+		background: $silver;
+		border-radius: 8px;
+
+        .per-2 {
+            background-color: $feb-orange;
+        }
+        .per-3 {
+            background-color: $electric-violet;
+        }
+        .per-4 {
+            background-color: $eucalyptus;
+        }
+        .per-5 {
+            background-color: $azure;
+        }
+        .per-6 {
+            background-color: $crimson;
+        }
+        .per-7 {
+            background-color: $lipstick;
+        }
+    }
+
+    &__per {
+        position: relative;
+        @extend %sans-regular;
+        height: 10px;
+        background-color: $chilean-fire;
+        border-radius: 8px;
+        width: 0;
+        transition: 1s linear;
+        &:before{
+            content: attr(per);
+            position: absolute;
+            z-index: 10;
+            padding: 4px 6px;
+            background-color: $shark;
+            color: $white;
+            font-size: 12px;
+            border-radius: 4px;
+            top: -35px;
+            right: 0;
+            transform: translateX(50%);
+        }
+        &:after{
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: $shark;
+            top: -20px;
+            right: 0;
+            transform: translateX(50%) rotate(45deg);
+            border-radius: 2px;
+        }
+    }
+
+    .chart{
+
+        &__ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        &__info {
+            width: 100%;
+            max-width: 150px;
+            margin: 0 auto;
+            padding-top: 10px;
+			text-align: center;
+
+            .percent-1 {
+                background-color: $eucalyptus;
+            }
+        }
+
+        &__percent {
+            display: inline-block;
+            width: 110px;
+            height: 110px;
+            line-height: 110px;
+            border-radius: 50%;
+            background-color: $crimson;
+            @extend %sans-bold;
+			font-size: 36px;
+            color: $white;
+            margin-bottom: 15px;
+        }
+
+        &__text {
+            @extend %sans-regular;
+            font-size: 14px;
+            color: $shark;
+        }
+    }
+
+
+    @include mq("tablet") {
+
+        &__content {
+            flex-direction: column;
+        }
+
+        &__skills {
+            width: 98%;
+        }
+
+    }
+
+}

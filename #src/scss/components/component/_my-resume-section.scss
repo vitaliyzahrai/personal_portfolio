@@ -1,0 +1,20 @@
+.my-resyme {
+    background-color: $gallery;
+    
+    .logo {
+        padding-bottom: 20px;
+        
+        &__logo {
+            color: $shark;
+        }
+    }
+
+    &__btn {
+        max-width: 400px;
+
+        a {
+            text-decoration: none;
+        }
+    }
+
+}

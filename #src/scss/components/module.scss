@@ -9,9 +9,16 @@
 @import 'atom/logo';
 @import 'atom/social';
 @import 'atom/title';
+@import 'atom/text-info';
+@import 'atom/popup';
 
 
 // COMPONENT
 @import 'component/banner-section';
 @import 'component/about-section';
+@import 'component/skill-section';
+@import 'component/education-section';
+@import 'component/portfolio-section';
+@import 'component/contact-me-section';
+@import 'component/my-resume-section';
 
