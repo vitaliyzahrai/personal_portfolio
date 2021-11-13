@@ -1361,6 +1361,10 @@ hr {
   margin: 10px 0;
 }
 
+.popup__btn a {
+  text-decoration: none;
+}
+
 .banner {
   height: 700px;
   background-color: #EAEAEA;
